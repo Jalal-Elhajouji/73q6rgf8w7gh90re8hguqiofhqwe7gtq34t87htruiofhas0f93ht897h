@@ -1,5 +1,12 @@
+import { AppLayout } from './components/layout/AppLayout'
+import { TransactionsPage } from './features/transactions/TransactionsPage'
+
 function App() {
-  return <h1>Hello, world!</h1>
+  return (
+    <AppLayout>
+      <TransactionsPage />
+    </AppLayout>
+  )
 }
 
 export default App

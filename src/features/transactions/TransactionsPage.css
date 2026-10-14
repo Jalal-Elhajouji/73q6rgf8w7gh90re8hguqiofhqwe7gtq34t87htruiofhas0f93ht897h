@@ -1,0 +1,263 @@
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.page-title {
+  margin: 0;
+  color: var(--text-strong);
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.page-header__actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 32px;
+  padding: 0 10px;
+  border: 1px solid var(--border-strong);
+  border-radius: 6px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  color: var(--text-strong);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn--icon {
+  justify-content: center;
+  width: 33px;
+  padding: 0;
+}
+
+.btn--ghost:disabled {
+  border-color: var(--border);
+  box-shadow: none;
+  color: var(--text-disabled);
+  cursor: not-allowed;
+}
+
+.btn kbd {
+  margin-left: 6px;
+  color: var(--text-disabled);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.tabs {
+  display: flex;
+  gap: 27px;
+  margin-top: 24px;
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+}
+
+.tabs__tab {
+  padding: 0 0 10px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  background: none;
+  color: var(--text);
+  font: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.tabs__tab[aria-selected='true'] {
+  border-bottom-color: var(--text-strong);
+  color: var(--text-strong);
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 18px 0 22px;
+}
+
+.chips,
+.toolbar__right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 42px;
+  padding: 0 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text-strong);
+  font: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.chip:hover {
+  background: var(--surface-subtle);
+}
+
+.chip--active {
+  border: 2px solid var(--text-strong);
+  padding: 0 13px;
+}
+
+.chip--icon {
+  justify-content: center;
+  width: 42px;
+  padding: 0;
+  color: var(--text);
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 15px;
+}
+
+.data-table th {
+  height: 40px;
+  padding: 0 18px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-strong);
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.data-table td {
+  height: 48px;
+  padding: 0 18px;
+  color: var(--text-strong);
+  white-space: nowrap;
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: 1px solid var(--border);
+}
+
+.data-table tbody tr {
+  cursor: pointer;
+}
+
+.data-table tbody tr:hover td {
+  background: var(--surface-subtle);
+}
+
+.data-table tbody tr:hover td:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+.data-table tbody tr:hover td:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+.data-table td:first-child,
+.data-table th:first-child {
+  width: 160px;
+}
+
+.data-table__amount {
+  text-align: right !important;
+}
+
+.data-table__amount strong {
+  font-weight: 600;
+}
+
+.data-table__currency {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.data-table th:last-child,
+.data-table td:last-child {
+  width: 40%;
+}
+
+.destination {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.destination__icon {
+  display: grid;
+  place-items: center;
+  width: 17px;
+  height: 17px;
+  border-radius: 3px;
+  background: var(--surface-muted);
+  color: var(--text);
+}
+
+.destination__dots {
+  margin-left: 4px;
+  letter-spacing: 0.05em;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  color: var(--text);
+  font-size: 13px;
+}
+
+.pagination__btn {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border: 0;
+  background: none;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.pagination__btn:disabled {
+  cursor: default;
+}
+
+.pagination span {
+  margin-left: 8px;
+}
+
+@media (max-width: 900px) {
+  .toolbar {
+    flex-direction: column;
+  }
+
+  .page-header__actions .btn--ghost {
+    display: none;
+  }
+}

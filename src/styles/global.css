@@ -1,0 +1,55 @@
+:root {
+  --accent: #635bff;
+
+  --text-strong: #1a1b25;
+  --text: #414552;
+  --text-muted: #687385;
+  --text-disabled: #a3acba;
+
+  --surface: #ffffff;
+  --surface-subtle: #f6f8fa;
+  --surface-muted: #ebeef1;
+  --surface-hover: #f2f4f7;
+
+  --border: #ebeef1;
+  --border-strong: #d5dbe1;
+  --shadow-sm: 0 1px 1px rgba(0, 0, 0, 0.06);
+
+  --badge-neutral-bg: #f6f8fa;
+  --badge-neutral-border: #d5dbe1;
+  --badge-neutral-text: #545969;
+  --badge-success-bg: #d7f7c2;
+  --badge-success-border: #a6eb84;
+  --badge-success-text: #006908;
+  --badge-info-bg: #cff5f6;
+  --badge-info-border: #a2e8ec;
+  --badge-info-text: #0055bc;
+  --badge-danger-bg: #ffe7f2;
+  --badge-danger-border: #ffccdf;
+  --badge-danger-text: #b3093c;
+
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Ubuntu, sans-serif;
+  color: var(--text);
+  background: var(--surface);
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--surface);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
