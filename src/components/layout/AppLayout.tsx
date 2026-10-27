@@ -3,10 +3,15 @@ import { Sidebar } from './Sidebar'
 import { TopBar } from './TopBar'
 import './AppLayout.css'
 
-export function AppLayout({ children }: { children: ReactNode }) {
+type AppLayoutProps = {
+  currentPath: string
+  children: ReactNode
+}
+
+export function AppLayout({ currentPath, children }: AppLayoutProps) {
   return (
     <div className="app-layout">
-      <Sidebar />
+      <Sidebar currentPath={currentPath} />
       <div className="app-layout__main">
         <TopBar />
         <main>{children}</main>

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Icon } from '../../components/ui/Icon'
-import { payouts } from './data'
 import { PayoutsTable } from './PayoutsTable'
+import { usePayouts } from './payoutsDb'
 import type { PayoutStatus } from './types'
 import './TransactionsPage.css'
 
@@ -21,6 +21,7 @@ const statusFilters: StatusFilter[] = [
 ]
 
 export function TransactionsPage() {
+  const payouts = usePayouts()
   const [activeTab, setActiveTab] = useState<(typeof tabs)[number]>('Payouts')
   const [activeFilter, setActiveFilter] = useState(statusFilters[0])
 

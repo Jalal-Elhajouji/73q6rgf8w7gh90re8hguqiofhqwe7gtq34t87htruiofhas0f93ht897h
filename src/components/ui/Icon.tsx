@@ -25,6 +25,9 @@ const paths = {
   filter: 'M4 7h16M7 12h10M10 17h4',
   sliders: 'M4 8h9M17 8h3M15 6v4M4 16h3M11 16h9M9 14v4',
   bank: 'M3 9 12 4l9 5M5 10v7M9.5 10v7M14.5 10v7M19 10v7M3 20h18',
+  edit: 'M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16zM13.5 6.5l4 4',
+  trash: 'M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3',
+  close: 'M6 6l12 12M18 6 6 18',
 } as const
 
 export type IconName = keyof typeof paths

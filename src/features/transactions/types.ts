@@ -18,3 +18,5 @@ export type Payout = {
     bankLast4: string
   }
 }
+
+export type PayoutInput = Omit<Payout, 'id'>
